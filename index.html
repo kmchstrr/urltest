@@ -2,13 +2,25 @@
 <html>
 <body>
 
-<a href="csc:63-2-1008927-12:f04664e709a@TELPAD">1008927-12</a>
+<a href="csc:63-2-1008927-12:f04664e709a@TELPAD" onclick="runFunction">1008927-12</a>
 <br><br>
-<a href="csc:63-2-1008927-17:E4219aa358@TELPAD">1008927-17</a>  
+<a href="csc:63-2-1008927-17:E4219aa358@TELPAD" onclick="runFunction">1008927-17</a>  
 <br><br>
-<a href="csc:63-2-1009001-16:23DFC0f735@TELPAD">1009001-16</a>
+<a href="csc:63-2-1009001-16:23DFC0f735@TELPAD"onclick="runFunction">1009001-16</a>
 <br><br>
-<a href="csc:63-2-1009001-17:3CE1A194c3@TELPAD">1009001-17</a>  
+<a href="csc:63-2-1009001-17:3CE1A194c3@TELPAD"onclick="runFunction">1009001-17</a>  
 <br><br>
+<script>
+  
+function runFunction () {
+      if(navigator.share){
+
+        navigator.share( {title: "Sample Title", Text: "Sample Text"}).then(console.log("success"))
+      }
+      else{
+        console.log("navigator share not available");
+      }
+}
+</script>
 </body>
 </html>
