@@ -15,7 +15,7 @@
 function runFunction (evt) {
       if(navigator.share){
 
-        navigator.share( {title: "Sample Title", Text: "Sample Text"}).then(alert("success"))
+        navigator.share( {title: "Sample Title", Text: "Sample Text", url: "http://www.google.com/}).then(alert("success"))
       }
       else{
         console.log("navigator share not available");
