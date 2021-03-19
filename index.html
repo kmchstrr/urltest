@@ -2,36 +2,34 @@
 <html>
 <body>
 
-<a href="csc:63-2-1008927-12:f04664e709a@TELPAD">1008927-12</a>
+<a href="csc:63-2-1008927-12:f04664e709a@TELPAD" onclick="runFunction(evt)">1008927-12</a>
 <br><br>
-<a href="csc:63-2-1008927-17:E4219aa358@TELPAD">1008927-17</a>  
+<a href="csc:63-2-1008927-17:E4219aa358@TELPAD" onclick="runFunction(evt)">1008927-17</a>  
 <br><br>
-<a href="csc:63-2-1009001-16:23DFC0f735@TELPAD">1009001-16</a>
+<a href="csc:63-2-1009001-16:23DFC0f735@TELPAD" onclick="runFunction(evt)">1009001-16</a>
 <br><br>
-<a href="csc:63-2-1009001-17:3CE1A194c3@TELPAD">1009001-17</a>  
+<a href="csc:63-2-1009001-17:3CE1A194c3@TELPAD" onclick="runFunction(evt)">1009001-17</a>  
 <br><br>
-<a href="#">test</a>  
+<a href="#" onclick="runFunction(evt)">test</a>  
 <br><br>
 <script>
-  const share = document.querySelector('a');
-  
-  share.addEventListener('click', () => {
-    if(navigator.share) {
-      navigator.share( {title: "Sample Title", Text: "Sample Text", url: "http://www.google.com/}).then(alert("success"))
-    }
-  })
-// function runFunction (evt) {
-  
-  
-//       if(navigator.share){
 
-//         navigator.share( {title: "Sample Title", Text: "Sample Text", url: "http://www.google.com/}).then(alert("success"))
-//       }
-//       else{
-//         console.log("navigator share not available");
-//         window.alert("navigator share not available");
-//       }
-// }
+function runFunction (evt) {
+  
+  
+   if (navigator.share) {
+       navigator.share({
+         title: 'WebShare API Demo',
+         url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
+       }).then(() => {
+       console.log('Thanks for sharing!');
+      })
+      .catch(console.error);
+  } else {
+    // fallback
+    alert("web share not available");
+  }
+}
 </script>
 </body>
 </html>
