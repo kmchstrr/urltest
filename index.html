@@ -15,14 +15,22 @@
 <script>
   
 function runFunction (evt) {
-      if(navigator.share){
+  
+  const share = document.querySelector('a');
+  
+  share.addEventListener('click', () => {
+    if(navigator.share) {
+      navigator.share( {title: "Sample Title", Text: "Sample Text", url: "http://www.google.com/}).then(alert("success"))
+    }
+  })
+//       if(navigator.share){
 
-        navigator.share( {title: "Sample Title", Text: "Sample Text", url: "http://www.google.com/}).then(alert("success"))
-      }
-      else{
-        console.log("navigator share not available");
-        window.alert("navigator share not available");
-      }
+//         navigator.share( {title: "Sample Title", Text: "Sample Text", url: "http://www.google.com/}).then(alert("success"))
+//       }
+//       else{
+//         console.log("navigator share not available");
+//         window.alert("navigator share not available");
+//       }
 }
 </script>
 </body>
