@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<a href="csc:63-2-1008927-12:f04664e709a@TELPAD">1008927-12</a>
+<a href="csc:63-2-1008927-12:f04664e709a@TELPAD" onclick="runFunction()">1008927-12</a>
 <br><br>
 <a href="csc:63-2-1008927-17:E4219aa358@TELPAD" onclick="runFunction()">1008927-17</a>  
 <br><br>
@@ -17,20 +17,21 @@
 <script>
 
 function runFunction () {
+  let intViewportHeight = window.innerHeight;
+  alert(intViewportHeight);
   
-  
-   if (navigator.share) {
-       navigator.share({
-         title: 'WebShare API Demo',
-         url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
-       }).then(() => {
-       console.log('Thanks for sharing!');
-      })
-      .catch(console.error);
-  } else {
-    // fallback
-    alert("web share not available");
-  }
+//    if (navigator.share) {
+//        navigator.share({
+//          title: 'WebShare API Demo',
+//          url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
+//        }).then(() => {
+//        console.log('Thanks for sharing!');
+//       })
+//       .catch(console.error);
+//   } else {
+//     // fallback
+//     alert("web share not available");
+//   }
 }
 </script>
 </body>
