@@ -17,8 +17,10 @@
 <script>
 
 function runFunction () {
-  let intViewportHeight = window.clientHeight;
-  alert(intViewportHeight"a");
+  let intViewportHeight = window.innerHeight;
+  let intViewportWidth = window.innerWidth;
+
+  alert(intViewportHeight + intViewportWidth);
   
 }
 </script>
